@@ -3,7 +3,7 @@ import psycopg2 as pg
 
 class DB():
     def __init__(self):
-        self.conn = pg.connect(database='task-list', user=environ.get('DB_USER'), password=environ.get('DB_PASSWORD'))
+        self.conn = pg.connect(host="db", database=environ.get('DB_NAME'), user=environ.get('DB_USER'), password=environ.get('DB_PASSWORD'))
         self.cursor = self.conn.cursor()
         
     def commit(self):

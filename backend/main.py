@@ -91,4 +91,4 @@ def get_tasks():
     return Response(status=200, response=json.dumps({'tasks': tasks}), mimetype='application/json')
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
