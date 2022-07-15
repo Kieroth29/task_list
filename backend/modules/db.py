@@ -6,6 +6,9 @@ class DB():
         self.conn = pg.connect(host="db", database=environ.get('DB_NAME'), user=environ.get('DB_USER'), password=environ.get('DB_PASSWORD'))
         self.cursor = self.conn.cursor()
         
+    def __del__(self):
+        self.conn.close()
+        
     def commit(self):
         self.conn.commit()
         
