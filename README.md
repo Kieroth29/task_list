@@ -19,3 +19,6 @@ A container will be created, running both API and database instances in the back
 
 ## Ports
 The Flask application will run under port 5000 by default, while the Postgres database will run under port 5434. You're free to change these ports to fit your needs, by editing the `docker-compose.yml` file, located on the project's root folder.
+
+## Routes
+Here's a [Postman workspace](https://www.postman.com/kieroth29/workspace/task-list) to facilitate understanding of the routes and their params.
